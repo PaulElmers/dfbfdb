@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .chat-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .message {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .message .avatar {
+        float: left;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .message .text {
+        overflow: hidden;
+    }
+    .message .text p {
+        margin: 0;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .message .name {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .message .time {
+        font-size: 12px;
+        color: #777;
+        clear: both; /* Clear floating elements */
+    }
+    .message.sent {
+        background-color: #d4e9ff; /* Light blue background for sent messages */
+    }
+    .message.received {
+        background-color: #e91345; /* Light gray background for received messages */
+    }
+    .message.sent .text {
+        text-align: right;
+    }
+    .message.sent .name {
+        text-align: right;
+    }
+    .message.received .avatar {
+        float: right; /* Move the received message avatar to the right */
+        margin-right: 0; /* Reset margin-right */
+        margin-left: 10px; /* Add margin-left to separate avatar from text */
+    }
+    .message.received .text {
+        overflow: hidden;
+    }
+    .message.received .text p {
+        margin: 0;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .message.received .name {
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: right;
+    }
+</style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="message sent">
+        <img src="avatar_1.png" alt="User Avatar" class="avatar">
+        <div class="text">
+            <p class="name">User 1</p>
+            <p>Hello there!</p>
+            <p class="time">10:00 AM</p>
+        </div>
+    </div>
+    <div class="message received">
+        <div class="text">
+            <p class="name">User 2</p>
+            <p>Hi! How are you?</p>
+            <p class="time">10:05 AM</p>
+        </div>
+        <img src="avatar_2.png" alt="User Avatar" class="avatar">
+    </div>
+    <div class="message sent">
+        <img src="avatar_1.png" alt="User Avatar" class="avatar">
+        <div class="text">
+            <p class="name">User 1</p>
+            <p>I'm good, thanks for asking.</p>
+            <p class="time">10:10 AM</p>
+        </div>
+    </div>
+    <!-- Add more messages here -->
+</div>
+
+</body>
+</html>
